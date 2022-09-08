@@ -10921,28 +10921,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-.hero-img {
-  margin-bottom: 100px;
-}
-.hero-img img {
-  max-height: 500px;
-  width: 100%;
-}
-
-.card {
-  max-height: 360px;
-  margin: 50px 30px;
-}
-.card .card__image {
-  height: 300px;
-  width: 17rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.product__image {
-  height: 400px;
-  width: 400px;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=bootstrap.css.map */

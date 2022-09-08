@@ -51,3 +51,28 @@
 // Utilities
 @import "../bootstrap-5.2.0/scss/utilities/api";
 // scss-docs-end import-stack
+
+.hero-img {
+  margin-bottom: 100px;
+  img {
+    max-height: 500px;
+    width: 100%;
+  }
+}
+
+.card {
+  max-height: 360px;
+  margin: 50px 30px;
+  .card__image {
+    height: 300px;
+    width: 17rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.product__image {
+  height: 400px;
+  width: 400px;
+}

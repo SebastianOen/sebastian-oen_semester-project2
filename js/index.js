@@ -1,13 +1,18 @@
-import { baseUrl } from "./data";
+import { baseUrl } from "./data.js";
+import { getHero } from "./heroImg.js";
+import * as productManagement from "./products.js";
+import * as productSingular from "./soloProduct.js";
+import { getFeaturedProducts } from "./featured.js";
 
-const url = "https://sebastian-oen-semester-project.herokuapp.com/";
-
-async function getPost() {
+/*async function getPost() {
   try {
-    const respond = await fetch(url);
+    const respond = await fetch();
 
     const facts = await respond.json();
 
     console.log(facts);
   } catch (error) {}
-}
+}*/
+
+getHero();
+getFeaturedProducts();
