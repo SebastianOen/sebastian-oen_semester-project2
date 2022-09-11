@@ -3,6 +3,7 @@ import { getHero } from "./heroImg.js";
 import * as productManagement from "./products.js";
 import * as productSingular from "./soloProduct.js";
 import { getFeaturedProducts } from "./featured.js";
+import { showLocalStorage } from "./localStorage/loadLocal.js";
 
 /*async function getPost() {
   try {
@@ -15,4 +16,12 @@ import { getFeaturedProducts } from "./featured.js";
 }*/
 
 getHero();
-getFeaturedProducts();
+
+const featuredProducts = document.querySelector(".featured-products");
+if (!featuredProducts) {
+  const featuredProducts = "disabled";
+} else {
+  getFeaturedProducts();
+}
+
+showLocalStorage();

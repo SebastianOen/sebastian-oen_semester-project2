@@ -10,7 +10,7 @@ export const getFeaturedProducts = async () => {
 
     for (let i = 0; i < results.length; i++) {
       if (results[i].featured === true) {
-        featuredProducts.innerHTML += `<div class="col"><a href="#" class="card" style="width: 18rem">
+        featuredProducts.innerHTML += `<div class="col"><a href="../product.html?id=${results[i].id}" class="card" style="width: 18rem">
           <div class="card__image" style="background-image: url('${results[i].image.formats.small.url}')"></div>
           
           <div class="card-body">
