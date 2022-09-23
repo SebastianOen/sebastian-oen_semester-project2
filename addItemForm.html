@@ -33,18 +33,54 @@
               <a class="nav-link" href="./products.html">products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./cart.html">Cart</a>
+              <a class="nav-link" href="./cart.html">Cart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link logged-status" href="./login.html">Login</a>
+              <a class="nav-link logged-status" href="./login.html"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./addItemForm.html">Add Item</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <ul class="local-storage-container"></ul>
-      <div class="total-price"></div>
+      <h1 class="title">Add Item</h1>
+      <div class="container lg">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Item Title</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Item Price</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Item Description</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label upload__item__image"
+            >Item Image</label
+          >
+          <input class="form-control" type="file" id="formFile" />
+        </div>
+      </div>
     </main>
     <footer><p>copyright 2020&copy;</p></footer>
   </body>

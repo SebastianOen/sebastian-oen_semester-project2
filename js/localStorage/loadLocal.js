@@ -11,6 +11,7 @@ export function showLocalStorage() {
   localData.forEach((item) => {
     localStorageContainer.innerHTML += `
     <li>
+    <a href="../product.html?id=${item.id}">
     <div class="cart-item">
     <div class="cart-title">
     ${item.title}
@@ -20,6 +21,30 @@ export function showLocalStorage() {
    ${item.price},-
    </div> 
     </div>
-    </li>`;
+    </a>
+    </li>
+   
+    `;
   });
+}
+
+export function totalCalculator() {
+  const storageIndividualPrice = JSON.parse(localStorage.getItem("localList"));
+
+  const totalPriceContainer = document.querySelector(".total-price");
+
+  let total = 0;
+
+  console.log(total);
+  for (let i = 0; i < storageIndividualPrice.length; i++) {
+    total += storageIndividualPrice[i].price;
+  }
+  totalPriceContainer.innerHTML = total;
+}
+
+const totalPriceContainer = document.querySelector(".total-price");
+
+if (totalPriceContainer === null) {
+} else {
+  totalCalculator();
 }

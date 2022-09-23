@@ -3,8 +3,8 @@ import { getHero } from "./heroImg.js";
 import * as productManagement from "./products.js";
 import * as productSingular from "./soloProduct.js";
 import { getFeaturedProducts } from "./featured.js";
-import { showLocalStorage } from "./localStorage/loadLocal.js";
-
+import { showLocalStorage, totalCalculator } from "./localStorage/loadLocal.js";
+import * as localKeyStorage from "./localStorage/tokenManagement.js";
 /*async function getPost() {
   try {
     const respond = await fetch();
@@ -24,4 +24,23 @@ if (!featuredProducts) {
   getFeaturedProducts();
 }
 
+let localStorageContainer = document.querySelector(".local-storage-container");
+if (!localStorageContainer) {
+  localStorageContainer = "disabled";
+} else {
+  localStorageContainer = document.querySelector(".local-storage-container");
+}
+
 showLocalStorage();
+
+totalCalculator();
+
+const loginLinkContainer = document.querySelector(".logged-status");
+
+const tokenFound = getToken();
+
+if (!tokenFound) {
+  loginLinkContainer.innerHTML = "Login";
+} else {
+  loginLinkContainer.innerHTML = "Logout";
+}

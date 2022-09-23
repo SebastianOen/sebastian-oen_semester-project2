@@ -36,7 +36,7 @@ const getProducts = async () => {
 const createProducts = (products) => {
   const htmlContent = products
     .map((product) => {
-      return `<div class="col"> <a href="../product.html?id=${product.id}" class="card" style="width: 18rem">
+      return `<div class="col"> <a href="../product.html?id=${product.id}" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
       <div class="card__image" style="background-image: url('${product.image.formats.small.url}')"></div>
       
       <div class="card-body">

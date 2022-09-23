@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gidugu&family=Rubik+Dirt&display=swap");
+
+$logo__font: "Rubik Dirt";
+$title__font: "Bebas Neue";
+
+//colours
+$primary__colour: #7c0d0e;
+$secondary__colour: #262626;
+$accent__colour: #fff;
+
+.logo {
+  font-family: $logo__font;
+}
+
+//links
+.navbar-nav {
+  margin-left: 50px;
+  font-size: 1.8rem;
+}
+
+.nav-item {
+  a {
+    font-family: $title__font;
+  }
+}
+
+//footer
+footer {
+  margin-top: 200px;
+  height: 70px;
+  width: 100%;
+  background-color: $primary__colour;
+  text-align: center;
+
+  p {
+    color: $accent__colour;
+  }
+}
+
+//titles
+.title__text {
+  color: #fff;
+  font-family: $title__font;
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-family: $title__font;
+}
+.card-title {
+  color: $secondary__colour;
+  text-decoration: none;
+  font-family: $title__font;
+}
+
+$light: $primary__colour;
+$navbar-light-active-color: #fff;
+$navbar-light-disabled-color: #262626;
+$navbar-light-hover-color: #fff;

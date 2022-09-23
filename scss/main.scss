@@ -1,8 +1,8 @@
+// custom variables
+@import "./custom-variables";
+
 @import "../bootstrap-5.2.0/scss/mixins/banner";
 @include bsBanner("");
-
-// custom variables
-@import "./variables";
 
 // scss-docs-start import-stack
 // Configuration
@@ -63,6 +63,10 @@
 .card {
   max-height: 360px;
   margin: 50px 30px;
+  text-decoration: none;
+  .card-text {
+    color: #262626;
+  }
   .card__image {
     height: 300px;
     width: 17rem;
@@ -72,8 +76,7 @@
   }
 }
 
-.title {
-  text-align: center;
+.search__bar {
   margin-top: 50px;
 }
 
@@ -114,4 +117,8 @@
     background-position: center;
     background-size: contain;
   }
+}
+
+.upload__item__image {
+  margin-top: 50px;
 }
