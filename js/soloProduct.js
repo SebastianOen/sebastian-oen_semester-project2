@@ -6,10 +6,13 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const id = params.get("id");
-
-async function getPost() {
+async function getSoloProduct() {
   try {
+    const id = params.get("id");
+    if (!id) {
+      return;
+    }
+
     const respond = await fetch(`${baseUrl}products/${id}`);
     const facts = await respond.json();
 
@@ -44,4 +47,4 @@ async function getPost() {
   } catch (error) {}
 }
 
-getPost();
+getSoloProduct();

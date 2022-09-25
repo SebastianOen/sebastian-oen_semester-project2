@@ -38,6 +38,11 @@
             <li class="nav-item">
               <a class="nav-link logged-status" href="./login.html"></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link admin__rights" href="./addItemForm.html"
+                >Add Item</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -51,7 +56,12 @@
           placeholder="Search..."
           aria-label="default input example"
         />
-        <div class="row product-list"></div>
+        <div class="row product-list">
+          <div class="loader__container">
+            <div class="custom__loader"></div>
+            <h2 class="title">Loading</h2>
+          </div>
+        </div>
       </div>
     </main>
     <footer><p>copyright 2020&copy;</p></footer>

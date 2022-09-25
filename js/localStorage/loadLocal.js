@@ -4,12 +4,16 @@ export function showLocalStorage() {
   const localStorageContainer = document.querySelector(
     ".local-storage-container"
   );
-  const localData = getLocalStorageData();
 
-  localStorageContainer.innerHTML = "";
+  if (!localStorageContainer) {
+    return;
+  } else {
+    const localData = getLocalStorageData();
 
-  localData.forEach((item) => {
-    localStorageContainer.innerHTML += `
+    localStorageContainer.innerHTML = "";
+
+    localData.forEach((item) => {
+      localStorageContainer.innerHTML += `
     <li>
     <a href="../product.html?id=${item.id}">
     <div class="cart-item">
@@ -25,13 +29,20 @@ export function showLocalStorage() {
     </li>
    
     `;
-  });
+    });
+  }
 }
 
 export function totalCalculator() {
   const storageIndividualPrice = JSON.parse(localStorage.getItem("localList"));
 
+  if (!storageIndividualPrice) {
+    return;
+  }
   const totalPriceContainer = document.querySelector(".total-price");
+  if (!totalPriceContainer) {
+    return;
+  }
 
   let total = 0;
 

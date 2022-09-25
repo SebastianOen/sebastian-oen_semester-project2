@@ -36,7 +36,7 @@
               <a class="nav-link" href="./cart.html">Cart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link logged-status" href="./login.html"></a>
+              <a class="nav-link logged__status" href="./login.html"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="./addItemForm.html">Add Item</a>
@@ -48,11 +48,14 @@
     <main>
       <h1 class="title">Add Item</h1>
       <div class="container lg">
+        <form id="form__id2">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default"
             >Item Title</span
           >
           <input
+          id="product__title"
+          name="title"
             type="text"
             class="form-control"
             aria-label="Sizing example input"
@@ -64,7 +67,9 @@
             >Item Price</span
           >
           <input
-            type="text"
+          id="product__price"
+          name="price"
+            type="number"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
@@ -72,19 +77,31 @@
         </div>
         <div class="input-group">
           <span class="input-group-text">Item Description</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <textarea class="form-control" id="product__description" aria-label="With textarea"></textarea>
         </div>
-        <div class="mb-3">
-          <label for="formFile" class="form-label upload__item__image"
-            >Item Image</label
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Item Image</span
           >
-          <input class="form-control" type="file" id="formFile" />
+          <input
+          id="product__image"
+          name="image_url"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+          <button type="submit" class="btn btn-primary" id="submit__button">
+            Save
+          </button>
+        </form>
         </div>
       </div>
     </main>
     <footer><p>copyright 2020&copy;</p></footer>
   </body>
-  <script src="./js/index.js" type="module"></script>
+  <script src="./js/postNewProduct.js" type="module"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

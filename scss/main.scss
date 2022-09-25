@@ -122,3 +122,31 @@
 .upload__item__image {
   margin-top: 50px;
 }
+
+//Loader
+.custom__loader {
+  height: 100px;
+  width: 100px;
+  background-color: $primary__colour;
+  border: 10px solid $secondary__colour;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  border-radius: 50%;
+  animation: loading 5s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    margin-right: 50%;
+  }
+  33% {
+    margin-right: 40%;
+  }
+  66% {
+    margin-right: 60%;
+  }
+  100% {
+    margin-right: 50%;
+  }
+}

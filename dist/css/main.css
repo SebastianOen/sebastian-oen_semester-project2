@@ -11032,4 +11032,47 @@ textarea.form-control-lg {
 
 .upload__item__image {
   margin-top: 50px;
+}
+
+.custom__loader {
+  height: 100px;
+  width: 100px;
+  background-color: #7c0d0e;
+  border: 10px solid #262626;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  border-radius: 50%;
+  -webkit-animation: loading 5s infinite linear;
+          animation: loading 5s infinite linear;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    margin-right: 50%;
+  }
+  33% {
+    margin-right: 40%;
+  }
+  66% {
+    margin-right: 60%;
+  }
+  100% {
+    margin-right: 50%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    margin-right: 50%;
+  }
+  33% {
+    margin-right: 40%;
+  }
+  66% {
+    margin-right: 60%;
+  }
+  100% {
+    margin-right: 50%;
+  }
 }/*# sourceMappingURL=main.css.map */

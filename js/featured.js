@@ -1,13 +1,16 @@
 import { baseUrl } from "./data.js";
 
-const featuredProducts = document.querySelector(".featured-products");
-
 export const getFeaturedProducts = async () => {
   try {
     const url = `${baseUrl}products`;
     const respond = await fetch(url);
     const results = await respond.json();
+    const featuredProducts = document.querySelector(".featured-products");
+    if (!featuredProducts) {
+      return;
+    }
 
+    featuredProducts.innerHTML = "";
     for (let i = 0; i < results.length; i++) {
       if (results[i].featured === true) {
         featuredProducts.innerHTML += `<div class="col"><a href="../product.html?id=${results[i].id}" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
