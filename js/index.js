@@ -5,6 +5,7 @@ import * as productSingular from "./soloProduct.js";
 import { getFeaturedProducts } from "./featured.js";
 import { showLocalStorage, totalCalculator } from "./localStorage/loadLocal.js";
 import { getToken } from "./localStorage/tokenManagement.js";
+import { deleteFromLocalStorage } from "./localStorage/deleteLocal.js";
 
 getHero();
 getFeaturedProducts();
@@ -33,10 +34,36 @@ function checkForLogin() {
 }
 
 checkForLogin();
-const cartEmpty = document.querySelector(".cart__empty");
 
-const cartListExists = localStorage.getItem("localList");
+function checkCart() {
+  const cartEmpty = document.querySelector(".cart__empty");
 
-if (!cartListExists) {
-  cartEmpty.innerHTML = "Your cart is empty";
+  if (!cartEmpty) {
+    return;
+  }
+
+  const cartListExists = localStorage.getItem("localList");
+
+  if (!cartListExists) {
+    cartEmpty.innerHTML = "Your cart is empty";
+  }
 }
+
+checkCart();
+
+const loggedStatusContainer = document.querySelector(".logged-status");
+
+function deleteTokenFromLocal(event) {
+  event.preventDefault();
+  const tokenExists = localStorage.getItem("token");
+
+  if (tokenExists) {
+    return;
+  } else {
+    localStorage.removeItem("token");
+  }
+}
+
+loggedStatusContainer.addEventListener("click", () => {
+  deleteTokenFromLocal();
+});

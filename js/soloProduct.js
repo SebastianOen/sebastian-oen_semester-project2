@@ -43,8 +43,15 @@ async function getSoloProduct() {
       const newList = getLocalStorageData();
       newList.push(selectedItem);
       saveToLocalStorage(newList);
+      itemAdded();
     });
   } catch (error) {}
 }
 
 getSoloProduct();
+
+function itemAdded() {
+  const itemAddedMessage = document.querySelector(".item-added");
+
+  itemAddedMessage.innerHTML = "Item added";
+}

@@ -10,8 +10,6 @@ const form = document.querySelector("form");
 form.addEventListener("submit", doPost);
 
 async function doPost(event) {
-  const myForm = document.getElementById("form__id2");
-  const body = new FormData(myForm);
   event.preventDefault();
 
   const titleValue = document.querySelector("#product__title");
@@ -32,17 +30,13 @@ async function doPost(event) {
     method: "POST",
     body: data,
     header: {
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY0MDMzMDgwLCJleHAiOjE2NjY2MjUwODB9.q2EmfLQ3f1NN5hBR_4slbtpwwtyovO241hxfHoMJfFQ`,
+      Authorization: `Bearer ${bearerToken}`,
       "Content-Type": "application/json",
     },
   };
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-
-    if (result.user) {
-      location.href = "/index.html";
-    }
 
     if (result.error) {
       console.log(error);

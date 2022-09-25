@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gidugu&family=Rubik+Dirt&display=swap");
+/* Media Query */
 .logo {
   font-family: "Rubik Dirt";
 }
@@ -10999,6 +11000,12 @@ textarea.form-control-lg {
   text-align: center;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .product__image {
   height: 400px;
@@ -11007,10 +11014,22 @@ textarea.form-control-lg {
   background-position: center;
   background-size: contain;
 }
+@media (max-width: 800px) {
+  .product__image {
+    height: 200px;
+    width: 200px;
+  }
+}
 
 .product-text {
   margin-bottom: 50px;
   width: 75ch;
+}
+@media (max-width: 800px) {
+  .product-text {
+    max-width: 30ch;
+    text-align: center;
+  }
 }
 
 .cart-item {
@@ -11028,6 +11047,13 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+@media (max-width: 800px) {
+  .cart-item {
+    border: 4px solid #262626;
+    max-width: 300px;
+    margin: auto;
+  }
 }
 
 .upload__item__image {

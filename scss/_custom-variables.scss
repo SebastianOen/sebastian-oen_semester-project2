@@ -3,6 +3,13 @@
 $logo__font: "Rubik Dirt";
 $title__font: "Bebas Neue";
 
+/* Media Query */
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
 //colours
 $primary__colour: #7c0d0e;
 $secondary__colour: #262626;
