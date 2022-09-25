@@ -6,14 +6,13 @@ import { getFeaturedProducts } from "./featured.js";
 import { showLocalStorage, totalCalculator } from "./localStorage/loadLocal.js";
 import { getToken } from "./localStorage/tokenManagement.js";
 import { deleteFromLocalStorage } from "./localStorage/deleteLocal.js";
+import { deleteItem } from "./soloProduct.js";
 
 getHero();
 getFeaturedProducts();
 showLocalStorage();
 
 totalCalculator();
-
-console.log("h1 mom");
 
 function checkForLogin() {
   const loggedStatus = document.querySelector(".logged-status");
@@ -52,18 +51,3 @@ function checkCart() {
 checkCart();
 
 const loggedStatusContainer = document.querySelector(".logged-status");
-
-function deleteTokenFromLocal(event) {
-  event.preventDefault();
-  const tokenExists = localStorage.getItem("token");
-
-  if (tokenExists) {
-    return;
-  } else {
-    localStorage.removeItem("token");
-  }
-}
-
-loggedStatusContainer.addEventListener("click", () => {
-  deleteTokenFromLocal();
-});

@@ -11056,6 +11056,10 @@ textarea.form-control-lg {
   }
 }
 
+.custom__container {
+  margin-top: 30px;
+}
+
 .upload__item__image {
   margin-top: 50px;
 }

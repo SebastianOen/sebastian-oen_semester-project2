@@ -11,7 +11,6 @@ if (search === null) {
 } else {
   search.addEventListener("keyup", (e) => {
     const searchValue = e.target.value.toLowerCase();
-    console.log(searchValue);
 
     const filteredProducts = results.filter((product) => {
       return product.title.toLowerCase().includes(searchValue);
@@ -37,7 +36,7 @@ const createProducts = (products) => {
   const htmlContent = products
     .map((product) => {
       return `<div class="col"> <a href="../product.html?id=${product.id}" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
-      <div class="card__image" style="background-image: url('${product.image.formats.small.url}')"></div>
+      <div class="card__image" style="background-image: url('${product.image_url}')"></div>
       
       <div class="card-body">
         <h5 class="card-title">${product.title}</h5>

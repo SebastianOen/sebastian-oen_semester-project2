@@ -1,9 +1,8 @@
 import { getToken } from "./localStorage/tokenManagement.js";
 
-const url = "http://localhost:1337/products";
+const url = "https://sebastian-oen-semester-project.herokuapp.com/products";
 
 const bearerToken = getToken();
-console.log(bearerToken);
 
 const form = document.querySelector("form");
 
@@ -19,17 +18,15 @@ async function doPost(event) {
 
   const data = JSON.stringify({
     title: titleValue.value,
-    price: priceValue.value,
+    price: parseInt(priceValue.value),
     description: descriptionValue.value,
     image_url: imageValue.value,
   });
 
-  console.log(data);
-
   const options = {
     method: "POST",
     body: data,
-    header: {
+    headers: {
       Authorization: `Bearer ${bearerToken}`,
       "Content-Type": "application/json",
     },
@@ -37,6 +34,7 @@ async function doPost(event) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
+    location.href = `../products.html`;
 
     if (result.error) {
       console.log(error);

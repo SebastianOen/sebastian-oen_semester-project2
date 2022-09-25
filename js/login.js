@@ -5,7 +5,7 @@ import {
 } from "./localStorage/tokenManagement.js";
 import { errorMessage } from "./utils/message.js";
 
-const url = "http://localhost:1337/auth/local/";
+const url = "https://sebastian-oen-semester-project.herokuapp.com/auth/local/";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#inputEmail3");
@@ -23,7 +23,6 @@ function submitForm(event) {
   const passwordValue = password.value.trim();
 
   if (usernameValue.length === 0 || passwordValue.length === 0) {
-    console.log("no value");
     errorMessage("error", "Enter user info");
   } else {
     doLogin(usernameValue, passwordValue);
